@@ -12,9 +12,9 @@ We will ask users to complete writing 5 different functions in Python (varying o
 The functions we are testing will have a function name, for loop, and if else statement: 
   1. Write a function called function1 that, for 0 through 9, prints out "even" if it's even and "odd" if it's odd. 
      
-     def function1():
+     	def function1():
      
-       for i in range(0, 10):
+       		for i in range(0, 10):
        
 		      if i % 2 == 0:
 		      
