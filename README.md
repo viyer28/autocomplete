@@ -10,13 +10,18 @@ We will ask users to complete writing 5 different functions in Python (varying o
   5. Press right key to complete word + list of options below
   
 The functions we are testing will have a function name, for loop, and if else statement: 
-  1. Write a function called function1 that, for 0 through 9, prints out "even" if it's even and "odd" if it's odd. \newline
+  1. Write a function called function1 that, for 0 through 9, prints out "even" if it's even and "odd" if it's odd. 
      
      def function1():
+     
        for i in range(0, 10):
+       
 		      if i % 2 == 0:
+		      
 			      print("even")
+			      
 		      else:
+		      
 			      print("odd")
             
             
