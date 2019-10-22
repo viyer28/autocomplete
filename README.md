@@ -9,3 +9,13 @@ We will ask users to complete writing 5 different functions in Python (varying o
   4. Press tab to complete word + list of options below
   5. Press right key to complete word + list of options below
   
+The functions we are testing: 
+  1. def function1():
+    
+  2. def function2():
+  
+  3. def function3():
+  
+  4. def function4():
+  
+  5. def function5():
