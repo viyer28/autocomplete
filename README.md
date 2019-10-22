@@ -13,16 +13,11 @@ The functions we are testing will have a function name, for loop, and if else st
   1. Write a function called function1 that, for 0 through 9, prints out "even" if it's even and "odd" if it's odd. 
      
      	def function1():
-     
-       		for i in range(0, 10):
-       
-		      if i % 2 == 0:
-		      
-			      print("even")
-			      
-		      else:
-		      
-			      print("odd")
+    		for i in range(0, 10):
+			if i % 2 == 0:
+				print("even")
+			else:
+				print("odd")
             
             
   2. def function2():
