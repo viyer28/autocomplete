@@ -54,6 +54,7 @@ def main():
 			print(i)
 
 		time.sleep(1)
+		print("Please begin. \n")
 		start_time = time.time()
 		end_time = 0
 		text = prompt('', key_bindings=kb, multiline=True)
