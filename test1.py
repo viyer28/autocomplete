@@ -10,12 +10,6 @@ kb = KeyBindings()
 start_time = time.time()
 end_time = 0
 
-# Finish test
-@kb.add('s-tab')
-def _(event):
-    end_time = time.time()
-    print("\nYour time: %f seconds"% (end_time-start_time))
-
 # Exit Test
 @kb.add('c-c')
 def _(event):
@@ -35,6 +29,8 @@ def _(event):
     
 def main():
     text = prompt('', key_bindings=kb, multiline=True)
+    end_time = time.time()
+    print("\nYour time: %f seconds"% (end_time-start_time))
 
 
 if __name__ == '__main__':
