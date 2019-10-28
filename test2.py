@@ -9,7 +9,9 @@ from prompt_toolkit.auto_suggest import AutoSuggest, Suggestion
 # word_list = ["def", "for", "range", "else", "print"]
 
 kb = KeyBindings()
-start_time = time.time()
+linebreak = "="*100
+t = "    "
+# start_time = time.time()
 end_time = 0
 
 # Dictionary of words to be replaced
@@ -73,10 +75,40 @@ class MyCustomSuggester(AutoSuggest):
 
 
 def main():
-    text = prompt('', key_bindings=kb, multiline=True, auto_suggest=MyCustomSuggester())
-    end_time = time.time()
-    print("\nYour time: %f seconds"% (end_time-start_time))
-    print("Autocompletes: %d"% autocompletes)
+    print('\n\n')
+    print(linebreak)
+    print("INSTRUCTIONS: For this test, a suggested word will be grayed out in place for certain keywords.")
+    print("These keywords are def, for, range, else, and print.")
+    print("Press tab to autocomplete the word.")
+    print("Look at the function below. Please recreate this function using this autocomplete functionality when you can.")
+    print(linebreak)
+    print("FUNCTION:")
+    print("def function2():\n{}for i in range(0, 20):\n{}{}if i % 10:\n{}{}{}print(\"yes\")\n{}{}else:\n{}{}{}print(\"no\")".format(t,t,t,t,t,t,t,t,t,t,t))
+    print(linebreak)
+    print("You will be timed, but timing will not start until you indicate you are ready to continue.")
+    print("As soon as you are finished, please press ctrl+c to end the timing.")
+    continue_ans = input('Do you wish to continue? y/n ?').lower()
+    if continue_ans == "n":
+        print("Goodbye!")
+        sys.exit()
+    elif continue_ans != "y":
+        print("Input not recognized please restart and try again. Goodbye!")
+        sys.exit()
+    else:
+        print("starting in ...")
+        for i in range(5,0,-1):
+            time.sleep(1)
+            print(i)
+
+        time.sleep(1)
+        start_time = time.time()
+        end_time = 0
+
+
+        text = prompt('', key_bindings=kb, multiline=True, auto_suggest=MyCustomSuggester())
+        end_time = time.time()
+        print("\nYour time: %f seconds"% (end_time-start_time))
+        print("Autocompletes: %d"% autocompletes)
 
 
 if __name__ == '__main__':
