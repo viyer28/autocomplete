@@ -9,8 +9,11 @@ from prompt_toolkit.completion import Completer, Completion
 # word_list = ["def", "for", "range", "else", "print"]
 
 kb = KeyBindings()
-start_time = time.time()
+linebreak = "="*100
+t = "    "
+# start_time = time.time()
 end_time = 0
+
 
 # Dictionary of words to be replaced
 completions = {
@@ -83,10 +86,40 @@ class MyCustomCompleter(Completer):
 
 
 def main():
-    text = prompt('', key_bindings=kb, multiline=True, completer=MyCustomCompleter())
-    end_time = time.time()
-    print("\nYour time: %f seconds"% (end_time-start_time))
-    print("Autocompletes: %d"% autocompletes)
+    print('\n\n')
+    print(linebreak)
+    print("INSTRUCTIONS: For this test, suggested words will be displayed in a dropdown menu for certain keywords.")
+    print("These keywords are def, for, range, else, and print.")
+    print("Press tab to autocomplete a word.")
+    print(linebreak)
+    print("FUNCTION:")
+    print("def function4():\n{}for i in range(0, 12):\n{}{}if i % 3:\n{}{}{}print(i)\n{}{}else:\n{}{}{}print(\".\")".format(t,t,t,t,t,t,t,t,t,t,t))
+    print(linebreak)
+    print("You will be timed, but timing will not start until you indicate you are ready to continue.")
+    print("As soon as you are finished, please press ctrl+c to end the timing.")
+    continue_ans = input('Do you wish to continue? y/n ?').lower()
+    if continue_ans == "n":
+        print("Goodbye!")
+        sys.exit()
+    elif continue_ans != "y":
+        print("Input not recognized please restart and try again. Goodbye!")
+        sys.exit()
+    else:
+        print("starting in ...")
+        for i in range(5,0,-1):
+            time.sleep(1)
+            print(i)
+
+        time.sleep(1)
+        start_time = time.time()
+        end_time = 0
+
+
+        text = prompt('', key_bindings=kb, multiline=True, completer=MyCustomCompleter())
+        end_time = time.time()
+        print("\nYour time: %f seconds"% (end_time-start_time))
+        print("Autocompletes: %d"% autocompletes)
+
 
 
 if __name__ == '__main__':
