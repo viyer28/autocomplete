@@ -1,13 +1,10 @@
 # autocomplete
 
-We are going to "interview" 10 people. 5 novices, 5 experts. 
+We're a group of students running an experiment to test the usability of different autocomplete mechanisms for programmers with various experience levels. We ask that you complete 5 very short functions in Python as you would in a regular code editor. Each function contains the following commonly used keywords: def, for, range, else, print. This experiment is not an assessment of coding ability; rather, for each of these functions, you can autocomplete the aforementioned keywords in your code in 5 different ways. The objective is to figure out which of the following 5 autocomplete methods are most intuitive for users: 
 
-We will ask users to complete writing 5 different functions in Python (varying order for each user):
-  1. Control -- no autocomplete feature here
-  2. Press tab to complete word + grayed out in-place (i.e. gmail)
-  3. Press right key to complete word + grayed out in-place (i.e. gmail)
-  4. Press tab to complete word + list of options below
-  5. Press right key to complete word + list of options below
+  Function 1: Control -- There is no autocomplete feature here (Type out the function as you normally would).
+  Function 2: Press tab to autocomplete a keyword + suggested word will be grayed out in-place. 
+  Function 3: Press right arrow key to autocomplete word + suggested word will be grayed out in-place.
+  Function 4: Press tab to autocomplete word + suggested words will be listed in a drop-down for you to select.  
+  Function 5: Press right arrow key to autocomplete word + suggested words will be listed in a drop-down for you to select.
   
-The functions we are testing will have a function name, for loop, and if else statement: 
-	SEE sample_functions.py file for the ones we will use

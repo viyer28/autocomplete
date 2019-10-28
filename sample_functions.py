@@ -43,7 +43,7 @@ def function4():
 		if i % 3 == 0:
 			print(i)
 		else:
-			pass
+			print(".")
 
 
 # Instruction: Write a function called function5 that for 0 through 4, 
